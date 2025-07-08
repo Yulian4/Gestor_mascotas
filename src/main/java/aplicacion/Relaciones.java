@@ -14,11 +14,16 @@ public Relaciones() {
 	VistaConsultarMascota ventanaConsultar = new VistaConsultarMascota();
 	
 	
+	
+//	Aplicacion aplicacion = new Aplicacion();
+	
 
 	 MascotaDAO miMascotaDAO = new MascotaDAO();
+	 
+	 //personaDAO mi 
      Coordinador miCoordinador = new Coordinador();
      
-     
+//     aplicacion.setCoordinador(miCoordinador);
      
      ventanaPrincipal.setMiCoordinador(miCoordinador);
      ventanaRegistrar.setMiCoordinador(miCoordinador);
@@ -32,11 +37,14 @@ public Relaciones() {
      miCoordinador.setVistaRegistrar(ventanaRegistrar);
      miCoordinador.setVistaConsultarLista(ventanaconsultarLista);
      miCoordinador.setVistaConsultarMascota(ventanaConsultar);
-     
-     
+         
      miCoordinador.setMascotaDAO(miMascotaDAO);
      
+     miCoordinador.mostrarVentanaPrincipal();
      
-     miCoordinador.mostrarVentanaPrincipal();;
+
+//     miCoordinador.mostrarVentanaRegistrar();
+     
+//     aplicacion.iniciar();
 }
 }

@@ -35,7 +35,9 @@ public class Coordinador {
 	public void setMascotaDAO(MascotaDAO mascotaDAO) {
 		this.mascotaDAO = mascotaDAO;
 	}
-
+	
+	
+//
 	public void mostrarVentanaRegistrar() {
 		vistaRegistrar.setVisible(true);
 	}
@@ -52,7 +54,10 @@ public class Coordinador {
 		vistaPrincipal.setVisible(true);
 	}
 
+	
+	
 	public String registrarMascota(Mascota mascota) {
+		System.out.println("estoy en coordinador");
 		return mascotaDAO.registrarMascota(mascota);
 
 	}
@@ -71,6 +76,7 @@ public class Coordinador {
 	public String ActualizarMascota(Mascota mascota) {
 		return mascotaDAO.actualizarMascota(mascota);
 	}
+
 
 	
 

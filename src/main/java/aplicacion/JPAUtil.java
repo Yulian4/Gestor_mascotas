@@ -18,7 +18,7 @@ public class JPAUtil {
 	public static void shutdown() {
 		if (factory!=null) {
 			factory.close();
-			factory=null;//se asigna null para que se pueda instanciar nuevamente
+			factory=null;
 		}
 	}
 	

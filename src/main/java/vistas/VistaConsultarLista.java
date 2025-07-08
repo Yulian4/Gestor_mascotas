@@ -46,16 +46,14 @@ public class VistaConsultarLista extends JFrame implements ActionListener {
 		btnConsultarLista.setBounds(50, 60, 220, 30);
 		btnConsultarLista.addActionListener(this);
 		panel.add(btnConsultarLista);
-		btnConsultarLista.addActionListener(this);
 
 		btnConsultarPorSexo = new JButton("Consultar Lista por Sexo");
 		btnConsultarPorSexo.setBounds(320, 60, 220, 30);
 		btnConsultarPorSexo.addActionListener(this);
 		panel.add(btnConsultarPorSexo);
-		btnConsultarPorSexo.addActionListener(this);
 
 		comboSexo = new JComboBox<>(new String[] { "Hembra", "Macho" });
-		comboSexo.setBounds(230, 20, 120, 25);
+		comboSexo.setBounds(420, 20, 120, 25);
 		panel.add(comboSexo);
 
 		modeloTabla = new DefaultTableModel();

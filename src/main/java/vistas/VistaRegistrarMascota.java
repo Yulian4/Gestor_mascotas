@@ -23,7 +23,6 @@ public class VistaRegistrarMascota extends JFrame implements ActionListener {
         setSize(400, 350);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
         iniciarComponentes();
     }
 
@@ -74,7 +73,6 @@ public class VistaRegistrarMascota extends JFrame implements ActionListener {
         btnGuardar.setBounds(80, 230, 100, 30);
         btnGuardar.addActionListener(this);
         panel.add(btnGuardar);
-        btnGuardar.addActionListener(this);
 
         btnCancelar = new JButton("Cancelar");
         btnCancelar.setBounds(200, 230, 100, 30);
@@ -94,24 +92,24 @@ public class VistaRegistrarMascota extends JFrame implements ActionListener {
         }
     }
 
+
 	public void setMiCoordinador(Coordinador miCoordinador) {
 		this.miCoordinador = miCoordinador;
 	}
 
-	private String registrar() {
+	private void registrar() {
 		Mascota mascota = new Mascota();
 		
+		mascota.setIdMascota(null);
 		mascota.setNombre(txtNombre.getText());
 		mascota.setColorMascota(txtColor.getText());
-		mascota.setSexo(txtRaza.getText());
+		mascota.setRaza(txtRaza.getText());
 		mascota.setSexo(comboSexo.getSelectedItem().toString());
-		
-		String res = miCoordinador.registrarMascota(mascota);
-		if (res.equals("si")) {
-			JOptionPane.showMessageDialog(this, "mascota registrada con éxito.");
-		} 
 
-		return res;
+		String res = miCoordinador.registrarMascota(mascota);
+			JOptionPane.showMessageDialog(null, res);
+	
+
 		
 	}
 

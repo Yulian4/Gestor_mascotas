@@ -9,34 +9,32 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="mascotas")//Se indica ya que el nombre de la clase es diferente al nombre de la tabla
+@Table(name="mascotas")
 public class Mascota implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)//el id de la mascota es autoincrementable
-	@Column(name = "id_mascota")//indicamos el nombre de campo al que la variable hace referencia ya que son diferentes
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_mascota")
 	private Long idMascota;
 	
-	@Column(nullable = false, length = 45)//el nombre no puede ser null en BD, así como el tamaño de varchar 45
+	@Column(nullable = false, length = 45)
 	private String nombre;
 	
-	@Column(length = 45)//solo indicamos el tamaño ya que corresponde la variable al nombre del campo en la tabla
+	@Column(length = 45)
 	private String raza;
 	
-	@Column(name = "color", length = 45)//indicamos el nombre de campo al que la variable hace referencia ya que son diferentes
+	@Column(name = "color", length = 45)
 	private String colorMascota;
 	
 	@Column(length = 45)
 	private String sexo;
 
-	//Creamos el constructor vacio
 	public Mascota() {
 		
 	}
-	
-	//Creamos el constructor con parametros sin el id	
+
 	public Mascota(String nombre, String raza, String colorMascota, String sexo) {
 		super();
 		this.nombre = nombre;
@@ -45,7 +43,6 @@ public class Mascota implements Serializable{
 		this.sexo = sexo;
 	}
  
-	//generamos los setters y getters correspondientes
 	public Long getIdMascota() {
 		return idMascota;
 	}

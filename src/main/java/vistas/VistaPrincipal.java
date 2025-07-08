@@ -15,7 +15,11 @@ public class VistaPrincipal extends JFrame implements ActionListener {
     private JButton btnRegistrarMascota, btnConsultarLista, btnConsultarMascota;
     private Coordinador miCoordinador;
 
-    public VistaPrincipal() {
+    public void setCoordinador(Coordinador coordinador) {
+		this.miCoordinador = coordinador;
+	}
+
+	public VistaPrincipal() {
         setTitle("Sistema de Mascotas");
         setSize(400, 300);
         setLocationRelativeTo(null);
@@ -39,23 +43,29 @@ public class VistaPrincipal extends JFrame implements ActionListener {
         btnRegistrarMascota.setBounds(100, 80, 200, 35);
         btnRegistrarMascota.addActionListener(this);
         panel.add(btnRegistrarMascota);
-        btnRegistrarMascota.addActionListener(this);
+   
 
         btnConsultarLista = new JButton("Consultar Lista de Mascotas");
         btnConsultarLista.setBounds(100, 130, 200, 35);
         btnConsultarLista.addActionListener(this);
         panel.add(btnConsultarLista);
-        btnConsultarLista.addActionListener(this);
+
 
         btnConsultarMascota = new JButton("Consultar Mascota");
         btnConsultarMascota.setBounds(100, 180, 200, 35);
         btnConsultarMascota.addActionListener(this);
         panel.add(btnConsultarMascota);
-        btnConsultarMascota.addActionListener(this);
 
         add(panel);
     }
 
+      
+    
+    
+    
+
+    
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == btnRegistrarMascota) {
@@ -70,12 +80,10 @@ public class VistaPrincipal extends JFrame implements ActionListener {
     }
     
 
-	public void setMiCoordinador(Coordinador miCoordinador) {
+	public void setMiCoordinador( Coordinador miCoordinador) {
 		this.miCoordinador = miCoordinador;
 	}
 
-//	public static void main(String[] args) {
-//        SwingUtilities.invokeLater(() -> new VistaPrincipal());
-//    }
+
 }
 

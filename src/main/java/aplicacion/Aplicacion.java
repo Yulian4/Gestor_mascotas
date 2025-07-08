@@ -46,8 +46,8 @@ public class Aplicacion {
 		miMascota.setColorMascota(JOptionPane.showInputDialog("Ingrese el color de la mascota"));
 		miMascota.setSexo(JOptionPane.showInputDialog("Ingrese el sexo de su mascota"));
 
-		System.out.println(miMascotaDao.registrarMascota(miMascota));
-		System.out.println();
+//		System.out.println(miMascotaDao.registrarMascota(miMascota));
+//		System.out.println();
 	}
 
 	private void consultar() {

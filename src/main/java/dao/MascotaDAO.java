@@ -14,12 +14,13 @@ public class MascotaDAO {
 	EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
 
 	public String registrarMascota(Mascota miMascota) {
+		System.out.println("entre a mascotadao");
 
 		entityManager.getTransaction().begin();
 		entityManager.persist(miMascota);
 		entityManager.getTransaction().commit();
 
-		String resp = "Mascota Registrada!";
+		String resp = "Mascota Registrada";
 
 		return resp;
 	}
